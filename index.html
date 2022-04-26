@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Homework 4</title>
+    <title>Homework 5</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -63,7 +63,9 @@
       <section class="hero-section">
         <div class="container title-container">
           <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-          <button class="hero-button" type="button">Заказать услугу</button>
+          <button data-modal-open class="hero-button" type="button">
+            Заказать услугу
+          </button>
         </div>
       </section>
 
@@ -129,25 +131,34 @@
           <h2 class="projects-title">Чем мы занимаемся</h2>
           <ul class="projects-list">
             <li>
-              <img
-                src="images/img1.jpg"
-                width="370"
-                alt="руки набирают на клавиатуре код"
-              />
+              <div class="projects-item-div">
+                <img
+                  src="images/img1.jpg"
+                  width="370"
+                  alt="руки набирают на клавиатуре код"
+                />
+                <p class="projects-item-text">Десктопные приложения</p>
+              </div>
             </li>
             <li>
-              <img
-                src="images/img2.jpg"
-                width="370"
-                alt="телефон в руке фотографирует экран ноутбука"
-              />
+              <div class="projects-item-div">
+                <img
+                  src="images/img2.jpg"
+                  width="370"
+                  alt="телефон в руке фотографирует экран ноутбука"
+                />
+                <p class="projects-item-text">Мобильные приложения</p>
+              </div>
             </li>
             <li>
-              <img
-                src="images/img3.jpg"
-                width="370"
-                alt="человек  выбирает на планшете цвет из палитры"
-              />
+              <div class="projects-item-div">
+                <img
+                  src="images/img3.jpg"
+                  width="370"
+                  alt="человек  выбирает на планшете цвет из палитры"
+                />
+                <p class="projects-item-text">Дизайнерские решения</p>
+              </div>
             </li>
           </ul>
         </div>
@@ -435,5 +446,15 @@
         </div>
       </div>
     </footer>
+    <div data-modal class="backdrop is-hidden">
+      <div class="modal">
+        <button data-modal-close class="modal-close-button" type="button">
+          <svg class="icon-close" width="30" height="30">
+            <use href="./images/sprite.svg#icon-close"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
